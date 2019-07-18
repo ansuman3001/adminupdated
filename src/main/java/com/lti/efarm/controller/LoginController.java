@@ -31,15 +31,18 @@ public class LoginController {
 	
 
 
-	@RequestMapping(value = "loginUser",  method = {RequestMethod.POST, RequestMethod.GET})
+	@RequestMapping(value = "/loginUser",  method = {RequestMethod.POST, RequestMethod.GET})
 	public ModelAndView processLogin(@ModelAttribute User theUser) {
+		
 		User usr = userService.checkUser(theUser);
 		ModelAndView model = null;
 		if (usr == null) {
+			
 			model = new ModelAndView("farmer-form");
 			model.addObject("error", "Invalid Username or Password");
 			System.out.println("fail");
 		} else {
+			
 			model = new ModelAndView("welcome");
 			model.addObject("usr", usr);
 			//model.addObject("usr", usr.getEmail());

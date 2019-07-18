@@ -12,11 +12,11 @@
 <h2 align="center">Farmer Welcome Login Page</h2>
 			<hr color="pink" size="3" />
 <!-- <c:url var="travelLink" value="/travel/travelForm">-->
-	<c:param name="farmer_id" value="${usr.id}" />
+	
 <!-- </c:url>-->
 
 <!--  <c:url var="leaveLink" value="/leave/leaaveForm">-->
-	<c:param name="farmer_id" value="${usr.farmer_id}" />
+	
 <!--</c:url>-->
 
 <div style="color: red" align="center">

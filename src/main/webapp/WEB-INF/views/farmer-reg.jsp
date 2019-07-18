@@ -50,33 +50,33 @@
         <div class="card-body">
                 <label class="row align-items-center justify-content-center" >Address Details</label>
 <div class="form-group"> 	 
-        <label for="addressline1"><span class="req">* </span> Address Line 1 </label>
-            <input class="form-control" type="text" name="addressline1" id = "txt" onkeyup = "Validate(this)" required /> 
-                <div id="addressline1"></div>   
+        <label for="house_no"><span class="req">* </span> House Number </label>
+            <input class="form-control" type="text" name="house_no" id = "house_no" onkeyup = "Validate(this)" required path="house_no"/>
+                            <div id="addressline1"></div>   
                 
 
                 <div class="form-group"> 	 
-                        <label for="addressline2"><span class="req">* </span> City </label>
-                            <input class="form-control" type="text" name="addressline2" id = "txt" onkeyup = "Validate(this)" required /> 
+                        <label for="city"><span class="req">* </span> City </label>
+                            <input class="form-control" type="text" name="city" id = "city" onkeyup = "Validate(this)" required path="city"/> 
                                 <div id="addressline2"></div> 
 
                                 <div class="form-group"> 	 
-                                        <label for="addressline2"><span class="req">* </span> State </label>
-                                            <input class="form-control" type="text" name="addressline2" id = "txt" onkeyup = "Validate(this)" required /> 
+                                        <label for="state"><span class="req">* </span> State </label>
+                                            <input class="form-control" type="state" name="state" id = "state" onkeyup = "Validate(this)" required path="state"/> 
                                                 <div id="addressline2">
 
                                          </div>
                                          
                                          <div class="form-group"> 	 
-                                                <label for="addressline2"><span class="req">* </span> Country </label>
-                                                    <input class="form-control" type="text" name="addressline2" id = "txt" onkeyup = "Validate(this)" required /> 
+                                                <label for="country"><span class="req">* </span> Country </label>
+                                                    <input class="form-control" type="country" name="country" id = "txt" onkeyup = "Validate(this)" required path="country" /> 
                                                         <div id="addressline2">
         
                                                  </div>
 
                         <div class="form-group">
-                                                <label for="pincode"><span class="req">* </span> Pincode </label>
-                                                        <input required type="number" name="pincode" id="pincode" class="form-control phone" maxlength="6" onkeyup="validatephone(this);" placeholder="6 digits pin"/> 
+                                                <label for="pin_code"><span class="req">* </span> Pincode </label>
+                                                        <input required type="number" name="pin_code" id="pin_code" class="form-control phone" maxlength="6" onkeyup="Validate(this);" placeholder="6 digits pin" path="pin_code"/> 
                                                 </div>
                                          </div>
                                 </div>
@@ -157,8 +157,8 @@
         <label for="password"><span class="req">* </span> Password: </label>
             <input required name="password" type="password" class="form-control inputpass" minlength="4" maxlength="16"  id="pass1" path="password"/> </p>
 
-        <label for="password"><span class="req">* </span> Password Confirm: </label>
-            <input required name="password" type="password" class="form-control inputpass" minlength="4" maxlength="16" placeholder="Enter again to validate"  id="pass2" onkeyup="checkPass(); return false;" />
+        <label for="password1"><span class="req">* </span> Password Confirm: </label>
+            <input required name="password1" type="password1" class="form-control inputpass" minlength="4" maxlength="16" placeholder="Enter again to validate"  id="pass2" onkeyup="checkPass(); return false;" />
                 <span id="confirmMessage" class="confirmMessage"></span>
     </div>
 </div>

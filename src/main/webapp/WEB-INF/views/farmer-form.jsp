@@ -20,14 +20,13 @@
             <form:form class="form-signin" action="loginUser" method="post" modelAttribute="user">
               <div class="form-label-group">
                     <label for="inputEmail">Email address</label>
-                <form:input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus path="email_id"></form:input>
+                <form:input  class="form-control" placeholder="Email address" path="email_id"/>
                 
               </div>
 
               <div class="form-label-group">
                     <label for="inputPassword">Password</label>
-                <form:input type="password" id="inputPassword" class="form-control" placeholder="Password" required path="password"></form:input>
-               
+                <form:input class="form-control" placeholder="Password" path="password"/>
               </div><br>
 
 
@@ -36,8 +35,8 @@
                     <!--  <input type="checkbox" class="custom-control-input" id="customCheck1">-->
                     <a href class="custom-control-label" for="customCheck1">Forgot password?</a>
                   </div>
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" >Sign in</button>
-              <hr class="my-4">
+<form:button>login</form:button>       
+       <hr class="my-4">
               
             </form>
             </form:form>
@@ -45,7 +44,7 @@
 
           <div>
               
-           <a class="button btn btn-primary"  href="<c:url value="../farmer/showFarmer"/>">Farmer ? SignUp</a> 
+           <a class="button btn btn-primary"  href="<c:url value="../farmer/showRegFarmer"/>">Farmer ? SignUp</a> 
  
             
                                 </div>

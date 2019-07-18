@@ -28,7 +28,7 @@ public class FarmerController
 	{
 		Farmer theFarmer=new Farmer();
 		theModel.addAttribute("farmer",theFarmer);
-		return "farmer-reg";
+		return "farmer-form";
 	}
 	
 	@PostMapping("saveFarmer")
