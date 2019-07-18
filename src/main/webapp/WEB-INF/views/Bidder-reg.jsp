@@ -14,30 +14,30 @@
     <div class="container">
 	<div class="row">
         <div class="col-md-6">
-        <form:form action="saveFarmer" method="post" modelAttribute="farmer">
+        <form:form action="saveBidder" method="post" modelAttribute="bidder">
          
            <!--  <form action="" method="post" id="fileForm" role="form" class="row align-items-center justify-content-center"> -->
-            <fieldset><legend class="text-center">Farmer Registration Form</legend>
+            <fieldset><legend class="text-center">Bidder Registration Form</legend>
 
             <!--Personal Details-->
      <div class="card">
         <div class="card-body">
                 <label class="row align-items-center justify-content-center" >Personal Details</label> 
             <div class="form-group"> 	 
-                <label for="fullname"><span class="req">* </span> Full name: </label>
-                    <input class="form-control" type="text" name="fullname" id = "txt" onkeyup = "Validate(this)" required path="fullname" />
+                <label for="bfullname"><span class="req">* </span> Full name: </label>
+                    <input class="form-control" type="text" name="bfullname" id = "txt" onkeyup = "Validate(this)" required path="bfullname" />
                 
                         <div id="errFirst"></div>    
             </div>
             <div class="form-group">
-                    <label for="contact"><span class="req">* </span> Phone Number: </label>
-                            <input required type="number" name="contact" id="contact" class="form-control phone" maxlength="28" onkeyup="validatephone(this);" placeholder="not used for marketing" path="contact"/> 
+                    <label for="bcontact"><span class="req">* </span> Phone Number: </label>
+                            <input required type="number" name="bcontact" id="bcontact" class="form-control phone" maxlength="28" onkeyup="validatephone(this);" placeholder="not used for marketing" path="bcontact"/> 
                     </div>
 
             
             <div class="form-group">
-                <label for="email_id"><span class="req">* </span> Email Address: </label> 
-                    <input class="form-control" required type="text" name="email_id" id = "email"  onchange="email_validate(this.value);" path="email_id" />   
+                <label for="bemail_id"><span class="req">* </span> Email Address: </label> 
+                    <input class="form-control" required type="text" name="bemail_id" id = "bemail_id"  onchange="email_validate(this.value);" path="bemail_id" />   
                         <div class="status" id="status"></div>
             </div>
         </div>
@@ -50,48 +50,48 @@
         <div class="card-body">
                 <label class="row align-items-center justify-content-center" >Address Details</label>
 <div class="form-group"> 	 
-        <label for="house_no"><span class="req">* </span> House Number </label>
-            <input class="form-control" type="text" name="house_no" id = "house_no" onkeyup = "Validate(this)" required path="house_no"/>
+        <label for="bhouse_no"><span class="req">* </span> House Number </label>
+            <input class="form-control" type="text" name="bhouse_no" id = "bhouse_no" onkeyup = "Validate(this)" required path="bhouse_no"/>
                             <div id="addressline1"></div>   
                 
 
                 <div class="form-group"> 	 
-                        <label for="city"><span class="req">* </span> City </label>
-                            <input class="form-control" type="text" name="city" id = "city" onkeyup = "Validate(this)" required path="city"/> 
+                        <label for="bcity"><span class="req">* </span> City </label>
+                            <input class="form-control" type="text" name="bcity" id = "bcity" onkeyup = "Validate(this)" required path="bcity"/> 
                                 <div id="addressline2"></div> 
 
                                 <div class="form-group"> 	 
-                                        <label for="state"><span class="req">* </span> State </label>
-                                            <input class="form-control" type="state" name="state" id = "state" onkeyup = "Validate(this)" required path="state"/> 
+                                        <label for="bstate"><span class="req">* </span> State </label>
+                                            <input class="form-control" type="text" name="bstate" id = "bstate" onkeyup = "Validate(this)" required path="bstate"/> 
                                                 <div id="addressline2">
 
                                          </div>
                                          
                                          <div class="form-group"> 	 
-                                                <label for="country"><span class="req">* </span> Country </label>
-                                                    <input class="form-control" type="country" name="country" id = "txt" onkeyup = "Validate(this)" required path="country" /> 
+                                                <label for="bcountry"><span class="req">* </span> Country </label>
+                                                    <input class="form-control" type="text" name="bcountry" id = "bcountry" onkeyup = "Validate(this)" required path="bcountry" /> 
                                                         <div id="addressline2">
         
                                                  </div>
 
                         <div class="form-group">
-                                                <label for="pin_code"><span class="req">* </span> Pincode </label>
-                                                        <input required type="number" name="pin_code" id="pin_code" class="form-control phone" maxlength="6" onkeyup="Validate(this);" placeholder="6 digits pin" path="pin_code"/> 
+                                                <label for="bpin_code"><span class="req">* </span> Pincode </label>
+                                                        <input required type="number" name="bpin_code" id="bpin_code" class="form-control phone" maxlength="6" onkeyup="Validate(this);" placeholder="6 digits pin" path="bpin_code"/> 
                                                 </div>
                                          </div>
                                 </div>
                                           
 
 <!--***************Address******-->
-<!--Land Details-->
+<!--Land Details
 
 <div class="card">
         <div class="card-body">
                 <label class="row align-items-center justify-content-center" >Land Details</label>
 
 <div class="form-group"> 	 
-        <label for="area"><span class="req">* </span> Area Of Land </label>
-            <input class="form-control" type="text" name="area" id = "txt" onkeyup = "Validate(this)" required /> 
+        <label for="barea"><span class="req">* </span> Area Of Land </label>
+            <input class="form-control" type="text" name="barea" id = "barea" onkeyup = "Validate(this)" required /> 
                 <div id="area"></div>   
                 
 
@@ -109,15 +109,15 @@
                                      </div>
                             </div> 
 
-<!--*******Land Details******-->
+<!--*******Land Details******-->-->
 
   <!--Bank Details-->
   <div class="card">
         <div class="card-body">
                 <label class="row align-items-center justify-content-center" >Bank Details</label>
   <div class="form-group">
-        <label for="upi"><span class="req">* </span> UPI: </label>
-                <input required type="text" name="upi" id="upi" class="form-control"  onkeyup="validate(this);" /> 
+        <label for="bupi"><span class="req">* </span> UPI: </label>
+                <input required type="text" name="bupi" id="bupi" class="form-control"  onkeyup="validate(this);" /> 
         </div>
 
          <!-- <div class="form-group">
@@ -133,18 +133,20 @@
         <div class="card-body">
                 <label class="row align-items-center justify-content-center" >Document Upload</label>
   <div class="form-group">
-        <label for="adhaarnumber"><span class="req">* </span> Adhaar Number: </label>
-                <input required type="text" name="adhaarnumber" id="adhaarnumber" class="form-control" onkeyup="validate(this);" /> 
+        <label for="badhaarnumber"><span class="req">* </span> Adhaar Number: </label>
+                <input required type="text" name="badhaarnumber" id="badhaarnumber" class="form-control" onkeyup="validate(this);" /> 
         </div>
 
         <div class="form-group">
-                <label for="pannumber"><span class="req">* </span>PAN: </label>
-                        <input required type="text" name="pannumber" id="pannumber" class="form-control" maxlength="10" onkeyup="validate(this);" /> 
+                <label for="bpannumber"><span class="req">* </span>PAN: </label>
+                        <input required type="text" name="bpannumber" id="bpannumber" class="form-control" maxlength="10" onkeyup="validate(this);" /> 
                 </div>
+                
                 <div class="form-group">
-                        <label for="certificate">Certificate: </label>
-                                <input type="text" name="certificate" id="certificate" class="form-control"  onkeyup="validate(this);" /> 
-                        </div>
+                <label for="btraderlicense"><span class="req">* </span>License:</label>
+                        <input required type="text" name="btraderlicense" id="btraderlicense" class="form-control" maxlength="40" onkeyup="validate(this);" /> 
+                </div>
+                
         </div></div>
 
 <!--*******Document Upload*****-->
@@ -154,11 +156,11 @@
         <div class="card-body">
                 <label class="row align-items-center justify-content-center" >Password</label>
 <div class="form-group">
-        <label for="password"><span class="req">* </span> Password: </label>
-            <input required name="password" type="password" class="form-control inputpass" minlength="4" maxlength="16"  id="pass1" path="password"/> </p>
+        <label for="bpassword"><span class="req">* </span> Password: </label>
+            <input required name="bpassword" type="password" class="form-control inputpass" minlength="4" maxlength="16"  id="bpass1" path="bpassword"/> </p>
 
-        <label for="password1"><span class="req">* </span> Password Confirm: </label>
-            <input required name="password1" type="password" class="form-control inputpass" minlength="4" maxlength="16" placeholder="Enter again to validate"  id="pass2" onkeyup="checkPass(); return false;" />
+        <label for="bpassword1"><span class="req">* </span> Password Confirm: </label>
+            <input required name="bpassword1" type="password" class="form-control inputpass" minlength="4" maxlength="16" placeholder="Enter again to validate"  id="bpass2" onkeyup="checkPass(); return false;" />
                 <span id="confirmMessage" class="confirmMessage"></span>
     </div>
 </div>

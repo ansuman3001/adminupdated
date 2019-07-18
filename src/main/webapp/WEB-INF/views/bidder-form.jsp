@@ -44,7 +44,7 @@
 
           <div>
               
-           <a class="button btn btn-primary"  href="<c:url value="../farmer/showRegFarmer"/>">Farmer ? SignUp</a> 
+           <a class="button btn btn-primary"  href="<c:url value="../bidder/showRegBidder"/>">Bidder ? SignUp</a> 
  			 
             
                                 </div>
