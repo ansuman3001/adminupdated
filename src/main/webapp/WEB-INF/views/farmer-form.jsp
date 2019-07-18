@@ -20,13 +20,13 @@
             <form:form class="form-signin" action="loginUser" method="post" modelAttribute="user">
               <div class="form-label-group">
                     <label for="inputEmail">Email address</label>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <form:input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus path="email_id"></form:input>
                 
               </div>
 
               <div class="form-label-group">
                     <label for="inputPassword">Password</label>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <form:input type="password" id="inputPassword" class="form-control" placeholder="Password" required path="password"></form:input>
                
               </div><br>
 

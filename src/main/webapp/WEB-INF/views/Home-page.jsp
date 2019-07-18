@@ -33,7 +33,7 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                           <a class="dropdown-item" href="#">Farmer</a>
                           <a class="dropdown-item" href="#">Bidder</a>
-                          <a class="dropdown-item" href="#">Admin</a>
+                          <a class="dropdown-item" href="<c:url value="/Admin/showAdmin"/>">Administrator</a>
                         </div>
                       </div>
                     <li class="nav-item">

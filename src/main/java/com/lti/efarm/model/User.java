@@ -1,5 +1,8 @@
 package com.lti.efarm.model;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -40,7 +43,10 @@ public class User {
 	}
 
 	public void setPassword(String password) {
-		this.password = password;
+		Base64.Encoder encoder=Base64.getEncoder();
+		String normalString=password;
+		String encodedString=encoder.encodeToString(normalString.getBytes(StandardCharsets.UTF_8));
+		this.password=encodedString;
 	}
 
 	@Override

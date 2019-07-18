@@ -35,7 +35,7 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                           <a class="dropdown-item" href="<c:url  value="user/loginForm" />">Farmer</a>
                           <a class="dropdown-item" href="#">Bidder</a>
-                          <a class="dropdown-item" href="#">Administrator</a>
+                          <a class="dropdown-item" href="<c:url value="/admin/showAdmin"/>">Handle</a>
                         </div>
                       </div>
                     <li class="nav-item">
