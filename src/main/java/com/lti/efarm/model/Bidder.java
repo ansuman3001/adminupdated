@@ -1,5 +1,8 @@
 package com.lti.efarm.model;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -124,7 +127,10 @@ public class Bidder {
 	}
 
 	public void setBpassword(String bpassword) {
-		this.bpassword = bpassword;
+		Base64.Encoder encoder=Base64.getEncoder();
+		String normalString=bpassword;
+		String encodedString=encoder.encodeToString(normalString.getBytes(StandardCharsets.UTF_8));
+		this.bpassword=encodedString;
 	}
 
 	@Override

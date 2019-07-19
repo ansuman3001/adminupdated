@@ -17,16 +17,16 @@
         <div class="card card-signin my-5">
           <div class="card-body">
             <h5 class="card-title text-center">Sign In</h5>
-            <form:form class="form-signin" action="loginUser" method="post" modelAttribute="user">
+            <form:form class="form-signin" action="login1User" method="post" modelAttribute="user1">
               <div class="form-label-group">
                     <label for="inputEmail">Email address</label>
-                <form:input  class="form-control" placeholder="Email address" path="email_id"/>
+                <form:input  class="form-control" placeholder="Email address" path="bemail_id"/>
                 
               </div>
 
               <div class="form-label-group">
                     <label for="inputPassword">Password</label>
-                <form:input class="form-control" placeholder="Password" path="password"/>
+                <form:input class="form-control" placeholder="Password" path="bpassword"/>
               </div><br>
 
 

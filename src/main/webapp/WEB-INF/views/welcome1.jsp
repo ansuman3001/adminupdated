@@ -9,7 +9,7 @@
 <body>
 
 
-<h2 align="center">Farmer Welcome Login Page</h2>
+<h2 align="center">Bidder Welcome Login Page</h2>
 			<hr color="pink" size="3" />
 <!-- <c:url var="travelLink" value="/travel/travelForm">-->
 	
@@ -20,7 +20,7 @@
 <!--</c:url>-->
 
 <div style="color: red" align="center">
-Welcome  Farmer ID: ${farmers.farmer_id} User: ${farmers.email_id} </div>
+Welcome Bidder ID: ${bidders.bidder_id} User1: ${bidders.bemail_id} </div>
 
 <a href="${travelLink}">Travel</a><br><br>
 <a href="${leaveLink}">Apply Leave</a>

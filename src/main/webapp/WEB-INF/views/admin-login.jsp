@@ -14,7 +14,8 @@
 
 
 
-<button type="button" class="btn btn-primary btn-lg btn-block">BIDDER DATA</button>
+
+<a class="button btn btn-primary"  href="<c:url value="../adminbid/showAdminBidder"/>">Bidder Data</a> 
   <a class="button btn btn-primary"  href="<c:url value="../admin/showAdminFarmer"/>">farmer Data</a> 
 
 

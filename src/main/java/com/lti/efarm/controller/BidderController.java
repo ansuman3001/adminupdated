@@ -50,7 +50,7 @@ public String saveBidderDetails(ModelMap theModel)
 {
 	Bidder theBidder=new Bidder();
 	theModel.addAttribute("bidder",theBidder);
-	return "bidder-reg";
+	return "Bidder-reg";
 }
 	
 	
