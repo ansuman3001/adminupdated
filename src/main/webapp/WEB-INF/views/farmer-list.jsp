@@ -32,6 +32,15 @@
 
 						<!-- loop over and print our customers -->
 						<c:forEach var="tempFarmer" items="${farmers}">
+						
+						<!-- construct an "update" link with customer id -->
+							<c:url var="updateLink" value="/farmer/updateForm">
+								<c:param name="farmerId" value="${tempFarmer.farmer_id}" />
+							</c:url>
+							<!-- construct an "delete" link with customer id -->
+							<c:url var="deleteLink" value="/farmer/delete">
+								<c:param name="farmerId" value="${tempFarmer.farmer_id}" />
+							</c:url>
 
 							<tr bgcolor="grey">
 								<td>${tempFarmer.farmer_id}</td>
@@ -44,10 +53,18 @@
 								<td>${tempFarmer.country}</td>
 								<td>${tempFarmer.pin_code}</td>
 								<td>${tempFarmer.password}</td>
+								
+								<td>
+									<!-- display the update link --> <a href="${updateLink}">Update</a>
+									| <a href="${deleteLink}"
+									onclick="if (!(confirm('Are you sure you want to delete this farmer?'))) return false">Delete</a>
+								</td>
 
 							</tr>
 
 						</c:forEach>
+						
+						
 
 					</table>
 				

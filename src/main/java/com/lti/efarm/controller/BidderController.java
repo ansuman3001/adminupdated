@@ -9,9 +9,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.lti.efarm.model.Bidder;
-
+import com.lti.efarm.model.Farmer;
 import com.lti.efarm.service.BidderService;
 
 
@@ -42,7 +43,7 @@ public class BidderController {
 	{
 	List<Bidder> theBidders=bidderService.getBidder();
 	theModel.addAttribute("Bidders", theBidders);
-	return "list-bidders";
+	return "bidder-list";
 	}
 
 @GetMapping("showRegBidder")
@@ -52,6 +53,20 @@ public String saveBidderDetails(ModelMap theModel)
 	theModel.addAttribute("bidder",theBidder);
 	return "Bidder-reg";
 }
+
+@GetMapping("/updateForm")
+public String showFormForUpdate(@RequestParam("bidderId") int theId,
+								ModelMap theModel) {
+	Bidder theBidder = bidderService.getBidder(theId);	
+	theModel.addAttribute("bidder", theBidder);
+	return "bidder-form";
+}
 	
+
+@GetMapping("/delete")
+public String deleteBidder(@RequestParam("bidderId") int theId) {
+	bidderService.deleteBidder(theId);
+	return "redirect:/bidder/list";
+}
 	
 }

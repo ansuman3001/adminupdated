@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.lti.efarm.model.Bidder;
+import com.lti.efarm.model.Farmer;
 
 
 
@@ -30,7 +31,7 @@ public class BidderDaoImpl implements BidderDao {
 
 	}
 
-	@Override
+
 	public List<Bidder> getBidder() {
 		Session session=sessionFactory.getCurrentSession();
 		CriteriaBuilder cb=session.getCriteriaBuilder();
@@ -46,6 +47,15 @@ public class BidderDaoImpl implements BidderDao {
 		Session currentSession=sessionFactory.getCurrentSession();
 		Bidder theBidder=currentSession.get(Bidder.class, theId);
 		return theBidder;
+	}
+
+
+	public void deleteBidder(int theId) {
+		System.out.println(theId);
+		Session session = sessionFactory.getCurrentSession();
+		Bidder book = session.byId(Bidder.class).load(theId);
+		session.delete(book);
+		
 	}
 
 }

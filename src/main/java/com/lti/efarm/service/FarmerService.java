@@ -13,5 +13,7 @@ public interface FarmerService
 	
 	public List<Farmer> getFarmer();
 	public Farmer getFarmer(int theId);
+	public void deleteFarmer(int theId);
+
 	
 }

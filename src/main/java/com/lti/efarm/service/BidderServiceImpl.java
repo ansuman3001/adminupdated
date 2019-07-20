@@ -33,4 +33,11 @@ public class BidderServiceImpl implements BidderService {
 		return bidderDAO.getBidder(theId);
 	}
 
+	@Transactional
+	public void deleteBidder(int theId) {
+		bidderDAO.deleteBidder(theId);
+		
+	}
+
+
 }

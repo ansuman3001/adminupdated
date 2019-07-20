@@ -33,18 +33,33 @@
 
 						<!-- loop over and print our customers -->
 						<c:forEach var="tempBidder" items="${bidders}">
+						
+						<!-- construct an "update" link with customer id -->
+							<c:url var="updateLink" value="/bidder/updateForm">
+								<c:param name="bidderId" value="${tempBidder.bidder_id}" />
+							</c:url>
+							<!-- construct an "delete" link with customer id -->
+							<c:url var="deleteLink" value="/bidder/delete">
+								<c:param name="bidderId" value="${tempBidder.bidder_id}" />
+							</c:url>
 
 							<tr bgcolor="grey">
-								<td>${tempBidder. bidder_id}</td>
+								<td>${tempBidder.bidder_id}</td>
 								<td>${tempBidder.bfullname}</td>
-								<td>${tempBidder. bcontact}</td>
+								<td>${tempBidder.bcontact}</td>
 								<td>${tempBidder.bemail_id }</td>
 								<td>${tempBidder.bhouse_no}</td>
 								<td>${tempBidder.bcity}</td>
 								<td>${tempBidder.bstate}</td>
 								<td>${tempBidder.bcountry}</td>
-								<td>${tempBidderbpin_code}</td>
+								<td>${tempBidder.bpin_code}</td>
 								<td>${tempBidder.bpassword}</td>
+								
+								<td>
+									<!-- display the update link --> <a href="${updateLink}">Update</a>
+									| <a href="${deleteLink}"
+									onclick="if (!(confirm('Are you sure you want to delete this bidder?'))) return false">Delete</a>
+								</td>
 
 							</tr>
 

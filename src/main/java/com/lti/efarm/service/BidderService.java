@@ -12,5 +12,5 @@ public void saveBidder(Bidder theBidder);
 	
 	public List<Bidder> getBidder();
 	public Bidder getBidder(int theId);
-
+	public void deleteBidder(int theId);
 }

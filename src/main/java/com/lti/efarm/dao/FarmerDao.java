@@ -9,5 +9,7 @@ public interface FarmerDao
 	public void saveFarmer(Farmer theFarmer);
 	public List<Farmer> getFarmer();
 	public Farmer getFarmer(int theId);
+	public void deleteFarmer(int theId);
+
 	
 }

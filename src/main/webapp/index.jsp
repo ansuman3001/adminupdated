@@ -39,7 +39,7 @@
                         </div>
                       </div>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Contact</a>
+                      <a class="nav-link" href="<c:url value="/farmer/contactus"/>">Contact</a>
                     </li>
                   </ul>
                 </div>

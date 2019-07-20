@@ -39,6 +39,13 @@ public class FarmerServiceImpl implements FarmerService
 	{
 		return farmerDAO.getFarmer(theId);
 	}
+	
+	@Transactional
+	public void deleteFarmer(int theId) {
+		farmerDAO.deleteFarmer(theId);
+		
+	}
+
 
 	
 

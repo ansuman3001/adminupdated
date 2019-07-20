@@ -177,7 +177,7 @@
 <!--Buttons-->
             <div class="row">
                     <div class="col-sm-12 text-center">
-                        <button class="btn btn-primary btn-md">Register</button>
+                       <a class="button btn btn-primary"  href="<c:url value="../farmer/showFarmerafter"/>">Register</a> 
                         <button class="btn btn-danger btn-md">Reset</button>
                      </div>
                 </div>
