@@ -1,29 +1,52 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta charset="ISO-8859-1">
+
 <title>Insert title here</title>
+<link href="<c:url value="/resources/css/style1.css"/>"rel="stylesheet">
+<body background="<c:url value="/resources/images/LTI.jpg"/>"/>
 </head>
 <body>
 
 
-<h2 align="center">Bidder Welcome Login Page</h2>
-			<hr color="pink" size="3" />
-<!-- <c:url var="travelLink" value="/travel/travelForm">-->
-	
-<!-- </c:url>-->
 
-<!--  <c:url var="leaveLink" value="/leave/leaaveForm">-->
-	
-<!--</c:url>-->
+				<h3 align=center>Crops for Bididing</h3>
+				<hr color="black" size="3" />
+				<table border=1   align=center>
+						<tr>
+						   <th>Registration id</th>
+							<th>Crop Type</th>
+							<th>Crop Name</th>
+							<th>Fertilizer Type</th>
+							<th>Quantity</th>
+							
+						</tr>
 
-<div style="color: red" align="center">
-Welcome Bidder ID: ${bidders.bidder_id} User1: ${bidders.bemail_id} </div>
+						<!-- loop over and print our customers -->
+						<c:forEach var="tempSell" items="${placesellreq}">
+						
+						
 
-<a href="${travelLink}">Travel</a><br><br>
-<a href="${leaveLink}">Apply Leave</a>
+							<tr bgcolor="grey">
+								<td>${tempSell.req_id}</td>
+								<td>${tempSell.crop_type}</td>
+								<td>${tempSell.crop_name}</td>
+								<td>${tempSell.fertilizer_type}</td>
+								<td>$tempSell.Quantity}</td>
+							
+								<td>
+							
+							</tr>
 
+						</c:forEach>
+						
+						
+
+					</table>
+				
 </body>
 </html>

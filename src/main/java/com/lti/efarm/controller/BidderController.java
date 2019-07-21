@@ -61,6 +61,13 @@ public String showFormForUpdate(@RequestParam("bidderId") int theId,
 	theModel.addAttribute("bidder", theBidder);
 	return "bidder-form";
 }
+
+@GetMapping("showAfterBidderLogin")
+public String showAfterBidderLogin(ModelMap theModel)
+{
+	return "welcome1";
+}
+
 	
 
 @GetMapping("/delete")

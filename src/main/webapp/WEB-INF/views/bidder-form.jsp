@@ -35,17 +35,18 @@
                     <!--  <input type="checkbox" class="custom-control-input" id="customCheck1">-->
                     <a href class="custom-control-label" for="customCheck1">Forgot password?</a>
                   </div>
-<form:button>login</form:button>       
+<a class="button btn btn-primary"  href="<c:url value="../bidder/showAfterBidderLogin"/>">Login</a>       
        <hr class="my-4">
               
-             <form:button>Submit</form:button>
+            <!--   <form:button>Submit</form:button> -->
             </form:form>
           </div>
 
           <div>
               
         
- 			 
+ 			  <a class="button btn btn-primary"  href="<c:url value="../bidder/showRegBidder"/>">Bidder ? SignUp</a> 
+ 			  
             
                                 </div>
         </div>

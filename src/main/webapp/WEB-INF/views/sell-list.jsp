@@ -27,7 +27,7 @@
 						</tr>
 
 						<!-- loop over and print our customers -->
-						<c:forEach var="tempSell" items="${placesellreq}">
+						<c:forEach var="tempSell" items="${sellrequests}">
 						
 						
 
