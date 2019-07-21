@@ -26,7 +26,7 @@
 
               <div class="form-label-group">
                     <label for="inputPassword">Password</label>
-                <form:input class="form-control" placeholder="Password" path="password"/>
+                <form:input type="password" class="form-control" placeholder="Password" path="password"/>
               </div><br>
 
 

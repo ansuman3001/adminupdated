@@ -24,6 +24,7 @@ public class PlaceSellReqDaoImpl implements PlaceSellReqDao {
 
 	public void saveSellReq(PlaceSellReq theSellReq) {
 		Session currentSession=sessionFactory.getCurrentSession();
+		System.out.println("In DAo"+theSellReq.getCrop_name());
 		currentSession.saveOrUpdate(theSellReq);
 	}
 

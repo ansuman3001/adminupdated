@@ -38,13 +38,13 @@
 <form:button>login</form:button>       
        <hr class="my-4">
               
-            </form>
+             <form:button>Submit</form:button>
             </form:form>
           </div>
 
           <div>
               
-           <a class="button btn btn-primary"  href="<c:url value="../bidder/showRegBidder"/>">Bidder ? SignUp</a> 
+        
  			 
             
                                 </div>

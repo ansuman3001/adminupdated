@@ -33,7 +33,7 @@
     <div class="row"></div>
         <div class="col-4">
           <div class="list-group" id="list-tab" role="tablist">
-            <a class="list-group-item list-group-item-action active" id="list-Place Sell Request-list" data-toggle="list" href="#list-Place Sell Request" role="tab" aria-controls="Place Sell Request">Place Sell Request</a>
+            <a class="button btn btn-primary"  href="<c:url value="/sellReq/showSellReqDetails"/>">Sell Request</a> 
             <a class="list-group-item list-group-item-action" id="list-Sold Crop History-list" data-toggle="list" href="#list-Sold Crop History" role="tab" aria-controls="Sold Crop History">Sold Crop History</a>
             <a class="list-group-item list-group-item-action" id="list-Marketplace-list" data-toggle="list" href="#list-Marketplace" role="tab" aria-controls="Marketplace">Marketplace</a>
           </div>
