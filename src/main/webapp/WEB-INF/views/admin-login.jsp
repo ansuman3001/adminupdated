@@ -11,12 +11,13 @@
   				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>  
   				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script> 
 <body>
+<h1 style="text-align:center">ADMINISTRATOR HANDLE</h1>
 
+<div class="text-center">
 
+<a  class="btn btn-primary btn-lg active" role="button" aria-pressed="true" href="<c:url value="../adminbid/showAdminBidder"/>">Bidder Data</a>
 
-
-<a class="button btn btn-primary"  href="<c:url value="../adminbid/showAdminBidder"/>">Bidder Data</a> 
-  <a class="button btn btn-primary"  href="<c:url value="../admin/showAdminFarmer"/>">farmer Data</a> 
-
+  <a  class="btn btn-primary btn-lg active" role="button" aria-pressed="true" href="<c:url value="../admin/showAdminFarmer"/>">Farmer Data</a>
+</div>
 
 </body>

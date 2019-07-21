@@ -1,55 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html" charset=ISO-8859-1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">  
-  				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
-  				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>  
-  				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script> 
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-        <div class="card card-signin my-5">
-          <div class="card-body">
-            <h5 class="card-title text-center">Sign In</h5>
-            <form:form class="form-signin" action="loginUser" method="post" modelAttribute="user">
-              <div class="form-label-group">
-                    <label for="inputEmail">Email address</label>
-                <form:input  class="form-control" placeholder="Email address" path="email_id"/>
-                
-              </div>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
-              <div class="form-label-group">
-                    <label for="inputPassword">Password</label>
-                <form:input type="password" class="form-control" placeholder="Password" path="password"/>
-              </div><br>
-
-
-
-              <div class="custom-control custom-checkbox mb-3">
-                    <!--  <input type="checkbox" class="custom-control-input" id="customCheck1">-->
-                    <a href class="custom-control-label" for="customCheck1">Forgot password?</a>
-                  </div>
-<form:button>login</form:button>       
-       <hr class="my-4">
-              
-            </form>
-            </form:form>
-          </div>
-
-          <div>
-              
-           <a class="button btn btn-primary"  href="<c:url value="../farmer/showRegFarmer"/>">Farmer ? SignUp</a> 
- 			 
-            
-                                </div>
-        </div>
-      </div>
-    </div>
+<!DOCTYPE html>
+ <header>
+ <meta charset="UTF-8">
+  
+ <title>Farmer Login</title>
+<link href="<c:url value="/resources/css/FarmerLoginCss.css" />" rel="stylesheet">
+ </header>
+  <body>
+ <h1 style="text-align:center">Farmer Form</h1>
+<div class="login-page">
+  <div class="form">
+  
+  <form:form action="loginUser" method="post" modelAttribute="user">
+      <form:input path="email_id" type="text" placeholder="email"/>
+      <form:input path="password" type="password" placeholder="password"/>
+      <input type="submit" name="submit" id="submit" value="Submit"/>
+      <p class="message">Not registered? <a href="../farmer/showRegFarmer">Register As Farmer</a></p>
+      </form:form>
   </div>
+</div>
 </body>

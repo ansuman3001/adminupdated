@@ -18,7 +18,7 @@
 				<hr color="black" size="3" />
 				<table border=1   align=center>
 						<tr>
-						   <th>Registration id</th>
+						    <th>Registration id</th>
 							<th>Crop Type</th>
 							<th>Crop Name</th>
 							<th>Fertilizer Type</th>
