@@ -16,7 +16,7 @@
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
-img {vertical-align: middle;height:520px;}
+img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
@@ -120,7 +120,9 @@ h4{
 <body>
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
               <div class="container">
-
+				<a class="navbar-brand" href="#">
+                      <img  alt="" height="60" width="60"  src= "<c:url value="/resources/images/agrilogo.png"/>">
+                    </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>

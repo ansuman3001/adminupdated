@@ -4,11 +4,14 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.lti.efarm.model.Auction;
 
@@ -23,13 +26,22 @@ public class AuctionController
 	@Autowired
 	private AuctionService auctionService;
 	
-	@GetMapping("/showAuction")
-	public String showAuction(ModelMap theModel)
+	
+	@RequestMapping(value = "/showAuction", method = RequestMethod.GET) 
+	public String showAuction(@RequestParam("bidamt") int bid,Model theModel)
 	{
 		Auction theAuction=new Auction();
+		theModel.addAttribute("bamt", bid);
 		theModel.addAttribute("auction",theAuction);
 		return "AuctionBidding";
 	}
+	
+	@RequestMapping(value = "/transferSellRequest",  method = {RequestMethod.POST, RequestMethod.GET})
+	public String transferSellRequest(){
+	   
+	   return "redirect:/sellReq/savePlaceSellRequest";
+	}
+
 	
 	@PostMapping("saveAuction")
 	public String saveAuction(@ModelAttribute("auction") Auction theAuction)
@@ -39,12 +51,14 @@ public class AuctionController
 	}
 
 @GetMapping("/list")
-	public String listAuction(ModelMap theModel)
+	public String listAuctionreq(ModelMap theModel)
 	{
 	List<Auction> theAuction=auctionService.getAuction();
-	theModel.addAttribute("auctions", theAuction);
-	return "auction-list";
+	theModel.addAttribute("auctions",theAuction);
+	return "Auction-list";
+	
 	}
+
 
 	
 }

@@ -33,11 +33,7 @@ public class PlaceSellReq {
 	@Column(name="quantity")
 	private long quantity;
 	
-	@Override
-	public String toString() {
-		return "PlaceSellReq [req_id=" + req_id + ", crop_type=" + crop_type + ", fertilizer_type=" + fertilizer_type
-				+ ", crop_name=" + crop_name + ", quantity=" + quantity + ", min_bid_amount=" + min_bid_amount + "]";
-	}
+	
 
 	public long getQuantity() {
 		return quantity;
@@ -94,7 +90,11 @@ public class PlaceSellReq {
 
 	
 	
-	
+	@Override
+	public String toString() {
+		return "PlaceSellReq [req_id=" + req_id + ", crop_type=" + crop_type + ", fertilizer_type=" + fertilizer_type
+				+ ", crop_name=" + crop_name + ", quantity=" + quantity + ", min_bid_amount=" + min_bid_amount + "]";
+	}
 	
 	
 

@@ -33,6 +33,10 @@
         <div class="col-4">
           <div class="list-group" id="list-tab" role="tablist">
             <a class="button btn btn-primary"  href="<c:url value="/sellReq/showSellReqDetails"/>">Sell Request</a> 
+            
+            <br><br><br>
+            
+               <a class="button btn btn-primary"  href="<c:url value="/sellReq/Marketplace"/>">View Marketplace</a> 
            
          
         </div>

@@ -13,14 +13,15 @@
 <h3>Bid Data</h3>
 
 <div class="container">
-  <form:form action="savePlaceSellRequest" method="post" modelAttribute="placeSellReq">
-  
-  
-       <form:input path="biddername" placeholder="Bidder Name" /><br>
-       <form:input path="biddercity" placeholder="Bidder City" /><br>
-       <form:input path="bidderphone" placeholder="Bidder Phone" /><br>
-       <form:input path="currentbid" placeholder="Current Bid" /><br>
-       <form:input path="bidamount" placeholder="Bid Amount" /><br>
+
+  <form:form action="saveAuction" method="post" modelAttribute="auction">
+ 
+    		<form:hidden path="auction_id" />
+       Bidder Name<form:input path="biddername" placeholder="Bidder Name" /><br>
+      Bidder City <form:input path="biddercity" placeholder="Bidder City" /><br>
+      Phone <form:input path="bidderphone" placeholder="Bidder Phone" /><br>
+      Current Bid <form:input path="currentbid" value="${bamt}" placeholder="Current Bid" /><br>
+       Bid Amount<form:input path="bidamount" placeholder="Bid Amount" /><br>
 
     <form:button>Submit</form:button>
   </form:form>

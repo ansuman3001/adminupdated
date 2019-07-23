@@ -38,6 +38,15 @@ public class PlaceSellReqController {
 		
 		return "FinalBidding";
 	}
+	
+	
+
+	@GetMapping("/Marketplace")
+	public String Marketplace(ModelMap theModel)
+	{
+		
+		return "Marketplace";
+	}
 
 	@GetMapping("/listSellreq")
 	public String listSellreq(ModelMap theModel) {
@@ -53,7 +62,9 @@ public class PlaceSellReqController {
 	{
 		
 	placeSellReqService.saveSellReq(theSellReq);
-		return "redirect:/placeSellReq/list";
+		//return "redirect:/sellReq/list";
+	return "DataBiddingSuccessful";
+	
 
 	}
 	
@@ -71,7 +82,7 @@ public class PlaceSellReqController {
 	{
 	List<PlaceSellReq> theSellReq=placeSellReqService.getPlaceSellReq();
 	theModel.addAttribute("placesellreq",theSellReq);
-	return "list-sell-req";
+	return "DataBiddingSuccessful";
 	}
 	
 	

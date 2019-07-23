@@ -10,7 +10,6 @@
   				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
   				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>  
   				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script> 
-  				
 <style>
 
 .center  {
@@ -22,25 +21,26 @@
   transform: translate(-50%, -50%);
 }
 
-</style> 				
-  				
-<body style="background-color:powderblue;">
+body
+{
+
+background-color:#808080;
+
+}
+
+</style>
+
+
+
+<body>
+<center>
 <div class="center">
-<h1 style="text-align:center, font-family:verdana;">ADMINISTRATOR HANDLE</h1>
+<img src= "<c:url value="/resources/images/waitBid.png"/>" alt="Smiley face" align="middle">
+<h2>Kindly wait </h2>
 
-<div class="text-center">
-
-<a  class="btn btn-primary btn-lg active" role="button" aria-pressed="true" href="<c:url value="../adminbid/showAdminBidder"/>">Bidder Data</a>
-
-<br><br>
-
-  <a  class="btn btn-primary btn-lg active" role="button" aria-pressed="true" href="<c:url value="../admin/showAdminFarmer"/>">Farmer Data</a>
-  
-  <br><br><br>
-  
-  <a  class="btn btn-primary btn-lg active" role="button" aria-pressed="true" href="<c:url value="../admin/showAuction"/>">Auction data</a>
-  
-  <br><br><br>
+<a class="button btn btn-primary"  href="<c:url value="../user1/login1User"/>">Go back</a>
 </div>
-</div>
+
+<center>
 </body>
+</html>

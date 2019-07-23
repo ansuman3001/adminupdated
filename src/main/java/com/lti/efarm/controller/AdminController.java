@@ -23,8 +23,7 @@ public class AdminController
 	@GetMapping("/showAdmin")
 	public String showAdminPage(ModelMap theModel)
 	{
-		//Farmer theFarmer=new Farmer();
-		//theModel.addAttribute("farmer",theFarmer);
+		
 		return "admin-login";
 	}
 	
@@ -41,6 +40,13 @@ public class AdminController
 		//Farmer theFarmer=new Farmer();
 		//theModel.addAttribute("farmer",theFarmer);
 		return "admin-farmer-login";
+	}
+	
+	@GetMapping("/showAuction")
+	public String showAuction(ModelMap theModel)
+	{
+		
+		return "adminAuctionLogin";
 	}
 	
 	

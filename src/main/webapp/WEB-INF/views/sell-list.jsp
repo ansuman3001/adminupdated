@@ -34,7 +34,7 @@
 						<c:forEach var="tempSell" items="${sellrequests}">
 						
 						<c:url var="BidLink" value="/auction/showAuction">
-								<c:param name="requestId" value="${tempSell.req_id}" />
+						<c:param name="bidamt" value="${tempSell.min_bid_amount}" />
 							</c:url>
 
 							<tr bgcolor="grey">

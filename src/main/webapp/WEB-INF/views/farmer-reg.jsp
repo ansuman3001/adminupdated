@@ -10,12 +10,12 @@
   				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
   				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>  
   				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-
+</head>
+<body style="background-color:powderblue;">
     <div class="container">
 	<div class="row">
         <div class="col-md-6">
         <form:form action="saveFarmer" method="post" modelAttribute="farmer">
-         
            <!--  <form action="" method="post" id="fileForm" role="form" class="row align-items-center justify-content-center"> -->
             <fieldset><legend class="text-center">Farmer Registration Form</legend>
 
@@ -197,3 +197,4 @@
 	</div>
 	</div>
 </div>
+</body>
