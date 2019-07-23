@@ -12,6 +12,17 @@
 <link href="<c:url value="/resources/css/FarmerLoginCss.css" />" rel="stylesheet">
  </header>
   <body>
+  
+  
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+                <img alt="" height="50" width="50" src= "<c:url value="/resources/images/agrilogo.png"/>">
+              </a>
+ </nav>
+
+<br><br><br>
+  
  <h1 style="text-align:center">Farmer Form</h1>
 <div class="login-page">
   <div class="form">

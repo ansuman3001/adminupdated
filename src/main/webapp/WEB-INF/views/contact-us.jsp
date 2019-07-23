@@ -13,10 +13,21 @@
   				
 
   				
-<body style="background-color:lightblue">
+<body>
+
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+                <img alt="" height="50" width="50" src= "<c:url value="/resources/images/agrilogo.png"/>">
+              </a>
+         
+      </nav>
+
+<br><br><br>
+
 <div class="container contact-form">
             <div class="contact-image">
-                <img src= "<c:url value="/resources/images/contact11.png"/>">
+                <img src= "<c:url value="/resources/images/contact.jpg"/>">
             </div>
             <form method="post">
                 <h3>Drop Us a Message</h3>

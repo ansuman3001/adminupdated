@@ -38,11 +38,18 @@ public class FarmerController
 		return "after-farmer-reg";
 	}
 	
+	@GetMapping("/aboutus")
+	public String contactUs(ModelMap theModel)
+	{
+		return "about-us";
+	}
+	
 	@GetMapping("/showafterContact")
 	public String afterContact(ModelMap theModel)
 	{
 		return "contact-us-submitted";
 	}
+	
 	
 	@PostMapping("saveFarmer")
 		public String saveFarmer(@ModelAttribute("farmer") Farmer theFarmer)
@@ -50,6 +57,7 @@ public class FarmerController
 		farmerService.saveFarmer(theFarmer);
 			return "redirect:/farmer/list";
 		}
+	
 	@GetMapping("/list")
 		public String listFarmers(ModelMap theModel)
 		{
@@ -57,6 +65,7 @@ public class FarmerController
 		theModel.addAttribute("farmers", theFarmers);
 		return "farmer-list";
 		}
+	
 	
 	@GetMapping("/showRegFarmer")
 	public String saveFarmerDetails(ModelMap theModel)

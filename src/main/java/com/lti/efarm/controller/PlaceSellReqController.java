@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.lti.efarm.model.Farmer;
 import com.lti.efarm.model.PlaceSellReq;
@@ -30,6 +31,13 @@ public class PlaceSellReqController {
 		theModel.addAttribute("placeSellReq",theSellReq);
 		return "sell-request";
 	}
+	
+	@GetMapping("/Bidding")
+	public String Bidding(ModelMap theModel)
+	{
+		
+		return "FinalBidding";
+	}
 
 	@GetMapping("/listSellreq")
 	public String listSellreq(ModelMap theModel) {
@@ -39,6 +47,7 @@ public class PlaceSellReqController {
 	}
 	
 	
+	
 	@PostMapping("/savePlaceSellRequest")
 	public String savePlaceSellReq(@ModelAttribute("placeSellReq") PlaceSellReq theSellReq)
 	{
@@ -46,6 +55,14 @@ public class PlaceSellReqController {
 	placeSellReqService.saveSellReq(theSellReq);
 		return "redirect:/placeSellReq/list";
 
+	}
+	
+	@GetMapping("/updateSellReq")
+	public String showFormForUpdate(@RequestParam("requestId") int theReqId,
+									ModelMap theModel) {
+		PlaceSellReq theSellReq = placeSellReqService.getPlaceSellReq(theReqId);	
+		theModel.addAttribute("sellrequest", theSellReq);
+		return "sell-list";
 	}
 	
 	

@@ -30,9 +30,23 @@ public class PlaceSellReq {
 	private String crop_name;
 	
 	
-	@Column(name="Quantity")
-	private long Quantity;
+	@Column(name="quantity")
+	private long quantity;
 	
+	@Override
+	public String toString() {
+		return "PlaceSellReq [req_id=" + req_id + ", crop_type=" + crop_type + ", fertilizer_type=" + fertilizer_type
+				+ ", crop_name=" + crop_name + ", quantity=" + quantity + ", min_bid_amount=" + min_bid_amount + "]";
+	}
+
+	public long getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(long quantity) {
+		this.quantity = quantity;
+	}
+
 	@Column(name="min_bid_amount")
 	private String min_bid_amount;
 
@@ -68,13 +82,7 @@ public class PlaceSellReq {
 		this.crop_name = crop_name;
 	}
 
-	public long getQuantity() {
-		return Quantity;
-	}
-
-	public void setQuantity(long quantity) {
-		Quantity = quantity;
-	}
+	
 
 	public String getMin_bid_amount() {
 		return min_bid_amount;
@@ -84,11 +92,8 @@ public class PlaceSellReq {
 		this.min_bid_amount = min_bid_amount;
 	}
 
-	@Override
-	public String toString() {
-		return "PlaceSellReq [req_id=" + req_id + ", crop_type=" + crop_type + ", fertilizer_type=" + fertilizer_type
-				+ ", crop_name=" + crop_name + ", Quantity=" + Quantity + ", min_bid_amount=" + min_bid_amount + "]";
-	}
+	
+	
 	
 	
 	

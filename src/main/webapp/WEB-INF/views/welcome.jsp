@@ -11,39 +11,33 @@
   				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>  
   				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script> 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Bidding</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Insurance</a>
-      </li>
+   
+      
       <li class="nav-item">
        <a class="nav-link"  style="right" href="<c:url value="../user/loginForm"/>">Logout</a>
+    
       </li>
     </ul>
   </div>
 </nav>
-
+   <br><br><br>
+   
+   <center>
     <div class="row"></div>
         <div class="col-4">
           <div class="list-group" id="list-tab" role="tablist">
             <a class="button btn btn-primary"  href="<c:url value="/sellReq/showSellReqDetails"/>">Sell Request</a> 
-            <a class="list-group-item list-group-item-action" id="list-Sold Crop History-list" data-toggle="list" href="#list-Sold Crop History" role="tab" aria-controls="Sold Crop History">Sold Crop History</a>
-            <a class="list-group-item list-group-item-action" id="list-Marketplace-list" data-toggle="list" href="#list-Marketplace" role="tab" aria-controls="Marketplace">Marketplace</a>
-          </div>
+           
+         
         </div>
-        <div class="col-8">
-          <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="list-Place Sell Request" role="tabpanel" aria-labelledby="list-Place Sell Request-list">...</div>
-            <div class="tab-pane fade" id="list-Sold Crop History" role="tabpanel" aria-labelledby="list-Sold Crop History-list">...</div>
-            <div class="tab-pane fade" id="list-Marketplace" role="tabpanel" aria-labelledby="list-Marketplace-list">...</div>
-          </div>
+        
         </div>
+        </center>
       </div>
       </center>
